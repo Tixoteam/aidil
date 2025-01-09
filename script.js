@@ -6,7 +6,7 @@ const products = [
 { name: 'Premium Bot Arisu Tendou', price: 5000, duration: 15 },
 { name: 'Premium Bot Arisu Tendou', price: 10000, duration: 30 },
 { name: 'Premium Bot Arisu Tendou', price: 20000, duration: 60 },
-  { name: 'Sewa Bot Arisu Tendou(GC+PREMIUM'), price: 70000, duration: 0 }
+  { name: 'Sewa Bot Arisu Tendou(GC+PREMIUM)', price: 70000, duration: 0 }
 ];
 
 const productTableBody = document.getElementById('product-table-body');
