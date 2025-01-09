@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dark-btn {
+            padding: 10px 20px;
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            width: 80%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-bottom: 1rem;  /* Menambahkan margin bawah */
+        }
+
+        .dark-btn:hover {
+            background-color: #0097a7;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .cyan-glow {
+            color: #00bcd4;
+            text-shadow: 0 0 5px #00bcd4;
+        }
+
+        .dark-input {
+            padding: 8px 12px;
+            background-color: #2c2c2c;
+            color: #fff;
+            border: 1px solid #444;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <header class="py-6 bg-gray-800 text-center">
+        <h1 class="text-3xl font-bold cyan-glow">Hubungi Kami</h1>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="py-8">
+        <div class="text-center">
+            <p class="text-lg mb-4">Jika Anda memiliki pertanyaan, silakan hubungi kami melalui email atau WhatsApp.</p>
+
+            <!-- Dropdown untuk memilih metode kontak -->
+            <div class="mb-4">
+                <select id="contact-method" class="dark-input" onchange="updateContactMethod()">
+                    <option value="email">Email</option>
+                    <option value="whatsapp">WhatsApp</option>
+                </select>
+            </div>
+
+            <!-- Tombol Email -->
+            <div id="email-contact" class="hidden mb-4">
+                <a href="mailto:arisutendouaja@gmail.com?subject=Inquiry&body=Halo saya memiliki beberapa pertanyaan." class="dark-btn w-full">
+                    Kirim Email
+                </a>
+            </div>
+
+            <!-- Tombol WhatsApp -->
+            <div id="whatsapp-contact" class="hidden mb-4">
+                <a href="https://wa.me/6281573232268?text=Hello, I have a question about your services." target="_blank" class="dark-btn w-full">
+                    Hubungi WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>© 2024 Bot WhatsApp Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk mengubah tampilan tombol berdasarkan metode yang dipilih
+        function updateContactMethod() {
+            const selectedMethod = document.getElementById("contact-method").value;
+
+            if (selectedMethod === "email") {
+                document.getElementById("email-contact").classList.remove("hidden");
+                document.getElementById("whatsapp-contact").classList.add("hidden");
+            } else if (selectedMethod === "whatsapp") {
+                document.getElementById("whatsapp-contact").classList.remove("hidden");
+                document.getElementById("email-contact").classList.add("hidden");
+            }
+        }
+
+        // Menampilkan pilihan pertama (email)
+        updateContactMethod();
+    </script>
+
+</body>
+</html>

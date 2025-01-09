@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Sewa Bot WhatsApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <!-- Header Image -->
+    <header class="relative">
+        <img src="https://cdn.tioxy.xyz/file/file-1736419565142.jpg" alt="Header Image" class="header-image">
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+    </header>
+        <!-- Hamburger Menu -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+        <ul class="text-center">
+            <li><a href="contact.html" class="cyan-glow">Kontak</a></li>
+        </ul>
+    </nav>
+    <main class="container mx-auto py-8">
+        <!-- Deskripsi Web -->
+        <section class="description-section text-center text-white">
+            <h2 class="text-2xl font-semibold cyan-glow mb-4">Selamat datang di Bot WhatsApp Store!</h2>
+            <p class="text-lg">Kami menyediakan berbagai layanan bot WhatsApp untuk membantu bisnis Anda lebih efisien. Pilih produk yang Anda butuhkan, tentukan durasi sewa, dan lakukan pembayaran dengan mudah melalui QR Code yang akan kami buatkan untuk Anda. Nikmati pengalaman terbaik dalam mengelola komunikasi melalui WhatsApp!</p>
+        </section>
+
+        <!-- Produk Table -->
+        <section id="product-section">
+            <h2 class="text-xl font-semibold cyan-glow mb-4">Pilih Produk</h2>
+            <table class="table-line w-full">
+                <thead>
+                    <tr>
+                        <th>Nama Produk</th>
+                        <th>Harga</th>
+                        <th>Durasi (Hari)</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    <!-- Produk dinamis akan dimuat di sini -->
+                </tbody>
+            </table>
+        </section>
+
+<!-- Checkout Section -->
+<section id="checkout-section" class="confirmation-section">
+    <h2 class="text-xl font-semibold cyan-glow mb-4 text-center">Checkout</h2>
+    <form id="checkout-form">
+        <label for="checkout-duration" class="text-sm">Durasi (Hari):</label>
+        <input type="number" id="checkout-duration" class="dark-input" required readonly>
+        <label for="checkout-amount" class="text-sm mt-2">Total Pembayaran:</label>
+        <input type="text" id="checkout-amount" class="dark-input" readonly>
+        
+        <!-- QR Code Canvas Container -->
+        <div id="qr-code-container" class="text-center mt-4">
+            <canvas id="qr-code" style="display: block; margin: 0 auto;"></canvas>
+        </div>
+        
+        <!-- Konfirmasi Pembayaran -->
+        <div id="confirmation-container" class="mt-4 text-center">
+            <button type="button" class="dark-btn mt-4" id="generate-qris-btn">Generate QRIS</button>
+        </div>
+
+        <!-- Konfirmasi Pembayaran ke WhatsApp -->
+        <div id="whatsapp-confirmation-container" class="mt-4 text-center hidden">
+            <a id="whatsapp-button" href="#" class="dark-btn" target="_blank">Konfirmasi Pembayaran ke WhatsApp</a>
+        </div>
+
+        <!-- Tombol Download QR setelah QR di-generate -->
+        <div id="download-qr-container" class="mt-4 text-center hidden">
+            <a id="download-qr-btn" href="#" class="dark-btn" download="QRCode.png">Download QR</a>
+        </div>
+    </form>
+</section>
+
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>© 2024 Bot WhatsApp Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

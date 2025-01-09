@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+        body {
+            background-color: #1f2937;
+            color: white;
+        }
+
+        /* Cyan Glow untuk elemen teks dan tabel */
+        .cyan-glow {
+            color: #00FFFF;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Tombol cyan dengan efek hover */
+        .cyan-btn {
+            background-color: #00FFFF;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cyan-btn:hover {
+            background-color: #00b3b3;
+        }
+
+        /* Tabel dengan garis cyan */
+        .table-line td, .table-line th {
+            border: 1px solid #00FFFF;
+            padding: 10px;
+        }
+
+        .table-line th {
+            background-color: #333;
+            text-align: center;
+        }
+
+        .table-line tr:hover {
+            background-color: rgba(0, 255, 255, 0.1);
+        }
+        .dark-btn {
+    padding: 10px 20px;  /* Menambahkan padding untuk tombol agar lebih besar */
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    width: 80%;  /* Memberikan lebar yang konsisten untuk tombol */
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dark-btn:hover {
+    background-color: #0097a7;
+}
+
+.mb-4 {
+    margin-bottom: 1rem; /* Menambahkan margin bawah agar ada jarak antara tombol */
+}
+
+.w-full {
+    width: 100%; /* Membuat tombol lebar penuh pada kontainer */
+}
+
+        /* Form dan input dengan tema gelap */
+        .dark-form {
+            background-color: #2d3748;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .dark-input {
+            background-color: #4a5568;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+        }
+
+        .dark-input:focus {
+            border: 2px solid #00FFFF;
+            outline: none;
+        }
+
+        .dark-btn {
+            background-color: #00FFFF;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .dark-btn:hover {
+            background-color: #00b3b3;
+        }
+
+        /* Header Image */
+        .header-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Deskripsi Section */
+        .description-section {
+            background-color: #2d3748;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: -40px;
+            margin-bottom: 20px;
+        }
+
+        /* Konfirmasi Section */
+        .confirmation-section {
+            background-color: #2d3748;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
+
+            .hamburger-menu div {
+                width: 30px;
+                height: 4px;
+                background-color: #00FFFF;
+                margin: 5px 0;
+                border-radius: 5px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-links.open {
+                display: block;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background-color: #333;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            }
+        }
+h1,
+h2 {
+  color: #333;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 20px;
+}
